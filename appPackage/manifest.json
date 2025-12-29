@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.24/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.24",
+  "version": "1.0.0",
+
+  "id": "10ba8cd6-0eb4-449d-8bdf-95ac150465de",
+
+  "developer": {
+    "name": "My App, Inc.",
+    "websiteUrl": "https://www.example.com",
+    "privacyUrl": "https://www.example.com/privacy",
+    "termsOfUseUrl": "https://www.example.com/termofuse"
+  },
+
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+
+  "name": {
+    "short": "MCSAP_Team_Bot",
+    "full": "MCSAP Team Bot"
+  },
+
+  "description": {
+    "short": "MCSAP Teams Bot",
+    "full": "MCSAP Teams Bot using Azure Bot Service"
+  },
+
+  "accentColor": "#FFFFFF",
+
+  "bots": [
+    {
+      "botId": "10ba8cd6-0eb4-449d-8bdf-95ac150465de",
+      "scopes": ["personal", "team", "groupChat"],
+      "supportsFiles": false,
+      "isNotificationOnly": false,
+      "commandLists": [
+        {
+          "scopes": ["personal", "team", "groupChat"],
+          "commands": [
+            { "title": "Hi", "description": "Say hi to the bot." },
+            { "title": "/reset", "description": "Delete conversation state." }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": [
+    "https://vicenary-eccentrically-elinor.ngrok-free.dev"
+  ]
+}
